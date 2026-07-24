@@ -1,0 +1,156 @@
+/* ================================================== */
+/* FORMS */
+/* ================================================== */
+
+.form {
+    position: fixed;
+    z-index: 40;
+    inset: 0;
+    transform: translateY(100vh);
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.5s,
+        transform 1.8s linear(0, 0.0075, 0.0283, 0.0599, 0.1002, 0.147, 0.1987, 0.2537, 0.3108, 0.3686, 0.4263, 0.483, 0.5381, 0.591, 0.6412, 0.6886, 0.7329, 0.7739, 0.8115, 0.8458, 0.8768, 0.9045, 0.9292, 0.9509, 0.9698, 0.986, 0.9999, 1.0115, 1.021, 1.0287, 1.0348, 1.0393, 1.0425, 1.0446, 1.0457, 1.046, 1.0455, 1.0445, 1.0429, 1.041, 1.0388, 1.0364, 1.0339, 1.0312, 1.0286, 1.0259, 1.0233, 1.0208, 1.0184, 1.0161, 1.014, 1.0119, 1.0101, 1.0084, 1.0068, 1.0054, 1.0042, 1.0031, 1.0021, 1.0013, 1.0005, 0.9999, 0.9994, 0.999, 0.9986, 0.9984, 0.9982, 0.998, 0.9979, 0.9979, 0.9979, 0.9979, 0.998, 0.998, 0.9981, 0.9982, 0.9983, 0.9985, 0.9986, 0.9987, 0.9988, 0.9989, 0.9991, 0.9992, 0.9993, 0.9994, 0.9995, 0.9996, 0.9996, 0.9997, 0.9998, 0.9998, 0.9999, 0.9999, 0.9999, 1, 1, 1, 1.0001, 1.0001, 1);
+}
+
+.form.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form .section { max-width: 768px; }
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    background-image: url('/assets/hero-desk.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================================================== */
+/* DISCOVER */
+/* ================================================== */
+
+.discover .section { min-height: 60vh; }
+
+/* ================================================== */
+/* GALLERY */
+/* ================================================== */
+
+.gallery .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'image1 image2 image2 image5'
+        'image3 image3 image4 image6';
+}
+
+.gallery .image-content {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .image-content:nth-child(1) { grid-area: image1; }
+.gallery .image-content:nth-child(2) { grid-area: image2; }
+.gallery .image-content:nth-child(3) { grid-area: image3; }
+.gallery .image-content:nth-child(4) { grid-area: image4; }
+.gallery .image-content:nth-child(5) { grid-area: image5; }
+.gallery .image-content:nth-child(6) { grid-area: image6; }
+
+.gallery .image-content .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================================================== */
+/* VALUE */
+/* ================================================== */
+
+.value .head .h1 {
+    max-width: 568px;
+    text-wrap: balance;
+}
+
+.value .body { max-width: 968px; }
+.value .body .step { grid-template-columns: 1fr 1fr; }
+
+.value .body .step:nth-child(even) {
+    grid-template-areas:
+        'image head'
+        'image body';
+}
+
+.value .body .step:nth-child(odd) {
+    grid-template-areas:
+        'head image'
+        'body image';
+}
+
+.value .body .step .image-content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    grid-area: image;
+}
+
+.value .body .step .image-content .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.value .body .step .heading {
+    margin-top: auto;
+    grid-area: head;
+}
+
+.value .body .step .para { grid-area: body; }
+
+/* ================================================== */
+/* BEYOND */
+/* ================================================== */
+
+.beyond .section { min-height: 60vh; }
+.beyond .h1 {
+    max-width: 768px;
+    text-wrap: balance;
+}
+
+.beyond .body { max-width: 768px; }
+.beyond .body > * {
+    padding-left: 8px;
+    border-left: 2px solid var(--color-fg-main);
+}
+
+/* ================================================== */
+/* TOOLKIT */
+/* ================================================== */
+
+.toolkit .body .feature { border-left: 1px solid var(--color-fg-main); }
+
+.toolkit .body .feature .image-content {
+    aspect-ratio: 4 / 5;
+    background-color: var(--color-bg-card);
+}
+
+.toolkit .body .feature .image-content .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================================== */
+/* STORE & INVITATION */
+/* ================================================== */
+
+.store .section,
+.invitation .section { min-height: 60vh; }

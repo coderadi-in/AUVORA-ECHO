@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>AUVORA ECHO &bull; coderadi</title>
+
+    <link rel="stylesheet" href="styles/utility.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsiveness.css">
+</head>
+
+<body>
+    <div class="custom-cursor-wrapper">
+        <div class="custom-cursor"></div>
+    </div>
+
+    <!-- <div class="loader" id="loader" aria-hidden="true">
+        <canvas id="loaderCanvas"></canvas>
+    </div> -->
+
+    <section class="success-page popover rounded-16 p-12" id="successPage">
+        <div class="content column gap-16 p-16 text-center center">
+            <span class="text fs-20 fw-500">Submission successful</span>
+            <span class="symbol fs-64">check</span>
+
+            <p class="para">The request has been recorded successfully, We'll reply to your provided email or phone within 24
+                hours.</p>
+
+            <button class="btn fl rounded-16 ph-24 pv-16 uppercase w-full">Okay</button>
+        </div>
+    </section>
+
+    <section class="form theme-inverted bg-main" id="registrationForm">
+        <section class="section p-48 column h-center gap-32">
+            <button class="btn ot symbol rounded-full p-16 close-btn close-registration">close</button>
+
+            <div class="head column gap-4">
+                <span class="mini uppercase text-muted">Join the founding circle</span>
+                <h1 class="h1">Registration request</h1>
+            </div>
+
+            <div class="body column gap-12">
+                <div class="input-elem gap-4 column">
+                    <input type="text" id="registrationName" class="input" placeholder="Your Name">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+
+                <div class="input-elem gap-4 column">
+                    <input type="email" id="registrationEmail" class="input" placeholder="Email Address">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+
+                <div class="input-elem gap-4 column">
+                    <input type="tel" id="registrationPhone" class="input" placeholder="Your Phone Number">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+            </div>
+
+            <div class="statement column gap-12">
+                <p class="para">Please keep me informed, so I can receive:</p>
+
+                <ul class="no-list">
+                    <li>
+                        <span class="text">Information on products and services which are of interest to me.</span>
+                    </li>
+                    <li>
+                        <span class="text">Personalized communications delivered by the method that suits me best.</span>
+                    </li>
+                    <li>
+                        <span class="text">Unique opportunities to have my say and help shape the future of ECHO AI</span>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn ot rounded-full ph-24 pv-16 send disabled">Submit request</button>
+        </section>
+    </section>
+
+    <section class="form theme-inverted bg-main" id="enquiryForm">
+        <section class="section p-48 column h-center gap-32">
+            <button class="btn ot symbol rounded-full p-16 close-btn close-enquiry">close</button>
+
+            <div class="head column gap-4">
+                <span class="mini uppercase text-muted">Enquire</span>
+                <h1 class="h1">Enquiry request</h1>
+            </div>
+
+            <div class="body column gap-12">
+                <div class="input-elem gap-4 column">
+                    <input type="text" id="enquiryName" class="input" placeholder="Your Name">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+                
+                <div class="input-elem gap-4 column">
+                    <input type="text" id="enquiryEmail" class="input" placeholder="Your Name">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+                
+                <div class="input-elem gap-4 column">
+                    <input type="text" id="enquiryPhone" class="input" placeholder="Your Name">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+                
+                <div class="input-elem gap-4 column">
+                    <input type="text" id="enquiryLine" class="input" placeholder="Your Name">
+                    <span class="mini err-msg fw-500 hidden"></span>
+                </div>
+            </div>
+
+            <div class="statement column gap-12">
+                <p class="para">Please keep me informed, so I can receive:</p>
+
+                <ul class="no-list">
+                    <li>
+                        <span class="text">Information on products and services which are of interest to me.</span>
+                    </li>
+                    <li>
+                        <span class="text">Personalized communications delivered by the method that suits me best.</span>
+                    </li>
+                    <li>
+                        <span class="text">Unique opportunities to have my say and help shape the future of ECHO AI</span>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn ot rounded-full ph-24 pv-16 send disabled">Submit request</button>
+        </section>
+    </section>
+
+    <header class="header inverted-element w-full">
+        <section class="section p-16 row h-sb">
+            <span class="text">AUVORA ECHO</span>
+
+            <div class="actions row gap-12">
+                <button class="btn link symbol registration-form-trigger">article</button>
+                <button class="btn link symbol enquiry-form-trigger">support_agent</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="main" id="main">
+        <section class="hero inverted-element h-screen" id="hero">
+            <span class="symbol animated-arrow">keyboard_arrow_down</span>
+        </section>
+
+        <section class="discover theme-inverted" id="discover">
+            <section class="section p-48 column center text-center gap-32">
+                <div class="head column gap-4">
+                    <span class="mini uppercase text-muted">the unspoken advantage</span>
+                    <h1 class="h1">
+                        <p class="fn-robo fs-48">Every product has a story.</p>
+                        <p class="fn-robo">Let it tell itself.</p>
+                    </h1>
+                </div>
+
+                <div class="body column gap-12">
+                    <p class="para">ECHO AI is the first one-click content engine built for your store — no prompts, no
+                        copy-pasting, no daily grind.</p>
+
+                    <div class="column center gap-8">
+                        <a href="#the-founding-circle" class="btn ot rounded-full ph-24 pv-16">Register your
+                            interest</a>
+                        <span class="text">Launching on Aug, 31 2026</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="gallery h-screen theme-inverted" id="gallery">
+            <section class="section grid p-48 gap-12">
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-1.webp" alt="Gallery image" class="img">
+                </div>
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-2.webp" alt="Gallery image" class="img">
+                </div>
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-3.webp" alt="Gallery image" class="img">
+                </div>
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-4.webp" alt="Gallery image" class="img">
+                </div>
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-5.webp" alt="Gallery image" class="img">
+                </div>
+                <div class="image-content rounded-12 bg-card container shadow">
+                    <img src="assets/image-6.webp" alt="Gallery image" class="img">
+                </div>
+            </section>
+        </section>
+
+        <hr class="divider">
+
+        <section class="value theme-inverted" id="value">
+            <section class="section p-48 column center gap-48">
+                <div class="head column center text-center gap-4">
+                    <span class="mini uppercase text-muted">The One-Click Atelier</span>
+                    <h1 class="h1 fs-48">From your store to your audience. One touch.</h1>
+                </div>
+
+                <div class="body column gap-32">
+                    <div class="step grid gap-24">
+                        <div class="image-content">
+                            <img src="assets/connect.webp" alt="Connect" class="img">
+                        </div>
+
+                        <h2 class="h2 heading">Connect</h2>
+                        <p class="para">Your product details are already there.</p>
+                    </div>
+
+                    <div class="step grid gap-24">
+                        <div class="image-content">
+                            <img src="assets/generate.webp" alt="Generate" class="img">
+                        </div>
+
+                        <h2 class="h2 heading">Generate</h2>
+                        <p class="para">Captions. Headlines. Reel scripts. Instantly.</p>
+                    </div>
+
+                    <div class="step grid gap-24">
+                        <div class="image-content">
+                            <img src="assets/publish.webp" alt="Publish" class="img">
+                        </div>
+
+                        <h2 class="h2 heading">Publish</h2>
+                        <p class="para">Zero friction between you and your daily content.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <hr class="divider">
+
+        <section class="beyond inverted-element" id="beyond-prompts">
+            <section class="section p-48 column center text-center gap-48">
+                <div class="head column center gap-4">
+                    <span class="mini uppercase text-muted">The Silence Beyond Prompts</span>
+                    <h1 class="h1">Why wrestle with prompts when your store already speaks?</h1>
+                </div>
+
+                <div class="body w-full grid cols-2 gap-12">
+                    <div class="left-side text-left m-auto">
+                        <p class="para">Copy data.</p>
+                        <p class="para">Write prompts.</p>
+                        <p class="para">Repeat.</p>
+                    </div>
+
+                    <div class="right-side text-left m-auto">
+                        <p class="para">One click.</p>
+                        <p class="para">Zero prompts.</p>
+                        <p class="para">Pure output.</p>
+                    </div>
+                </div>
+
+                <p class="para text-center mh-auto">From conventional AI to ECHO AI.</p>
+            </section>
+        </section>
+
+        <section class="toolkit theme-inverted" id="artisan-toolkit">
+            <section class="section p-48 column gap-48">
+                <div class="head column center text-center gap-4">
+                    <span class="mini uppercase text-muted">The Artisan's Toolkit</span>
+                    <h1 class="h1">
+                        <p class="fn-robo fs-48">Crafted for commerce.</p>
+                        <p class="fn-robo">Engineered for pace.</p>
+                    </h1>
+                </div>
+
+                <div class="body grid cols-auto-320 gap-16">
+                    <div class="feature">
+                        <div class="image-content">
+                            <img src="assets/captions.webp" alt="Captions" class="img">
+                        </div>
+
+                        <div class="text-content column gap-8 p-12">
+                            <span class="text fw-500 fs-20">Captions —</span>
+                            <p class="para">Platform-perfect, product-aware.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="image-content">
+                            <img src="assets/headlines.webp" alt="Headlines" class="img">
+                        </div>
+
+                        <div class="text-content column gap-8 p-12">
+                            <span class="text fw-500 fs-20">Headlines —</span>
+                            <p class="para">Immediate hooks that convert.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="image-content">
+                            <img src="assets/scripts.webp" alt="Scripts" class="img">
+                        </div>
+
+                        <div class="text-content column gap-8 p-12">
+                            <span class="text fw-500 fs-20">Reel Scripts —</span>
+                            <p class="para">Scripted storytelling, arriving soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="founding h-screen theme-inverted" id="the-founding-circle">
+            <section class="section p-48 column center gap-48 text-center">
+                <div class="head column center gap-4">
+                    <span class="mini uppercase text-muted">The founding circle</span>
+                    <h1 class="h1">
+                        <p class="fn-robo fs-48">Be among the first.</p>
+                        <p class="fn-robo">Reap the rewards forever.</p>
+                    </h1>
+                </div>
+
+                <div class="body column center gap-12">
+                    <p class="para fs-20">Pre-Register for ₹199 and secure 100 bonus credits. Plus, receive the
+                        standard 50-credit welcome bonus at launch — 150 effortless generations, reserved in your name.
+                    </p>
+
+                    <p class="para">100% refund if ECHO AI isn't live by 31st August 2026. Not a single hidden
+                        condition.</p>
+
+                    <button class="btn ot rounded-full ph-24 pv-16 uppercase registration-form-trigger">Bespoke
+                        yours</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="assurance inverted-element" id="assurance">
+            <section class="section p-48 column gap-12 center text-center">
+                <div class="head column center gap-4">
+                    <span class="mini uppercase text-muted">Absolute Assurance</span>
+                    <h1 class="h1">Your trust. Our vow.</h1>
+                </div>
+
+                <p class="para">If the app isn't live by August 31, 2026, you get every rupee back. Immediately.
+                    Unquestioningly.</p>
+            </section>
+        </section>
+
+        <section class="store theme-inverted" id="store">
+            <section class="section p-48 column h-center gap-48">
+                <div class="head column gap-4">
+                    <span class="mini uppercase text-muted">The Store, Elevated</span>
+                    <h1 class="h1">A flawless store. A head start.</h1>
+                </div>
+
+                <p class="para">Don't have a high-performing e-commerce site yet? Let us build you a premium,
+                    conversion-focused store — and earn 50 ECHO AI credits as our launch partner.</p>
+
+                <button class="btn ot rounded-full ph-24 pv-16 uppercase enquiry-form-trigger">enquire</button>
+            </section>
+        </section>
+
+        <hr class="divider">
+
+        <section class="invitation theme-inverted" id="invitation">
+            <section class="section p-48 column center gap-48 text-center">
+                <div class="head column gap-4 center">
+                    <span class="mini uppercase text-muted">The Invitation Remains</span>
+                    <h1 class="h1">
+                        <p class="fn-robo fs-48">Pre-registration is open.</p>
+                        <p class="fn-robo">Your 150 credits await.</p>
+                    </h1>
+                </div>
+
+                <p class="para">₹199. Fully refundable until 31.08.2026. No risks. Only advantage.</p>
+
+                <button class="btn ot rounded-full ph-24 pv-16 registration-form-trigger">Join the Founding
+                    Circle</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts/cursor.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>

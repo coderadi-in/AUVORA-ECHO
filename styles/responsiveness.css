@@ -1,0 +1,30 @@
+/* ================================================== */
+/* MAX-WIDTH 768 */
+/* ================================================== */
+
+@media (max-width: 768px) {
+    /* GALLERY */
+    .gallery .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'image1''image2''image3''image4''image5''image6';
+    }
+
+    /* VALUE */
+    .value .body .step {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'head''image''body' !important;
+    }
+}
+
+/* ================================================== */
+/* MAX-WIDTH 568 */
+/* ================================================== */
+
+@media (max-width: 568px) {
+    /* HERO */
+    .hero { background-image: url('/assets/hero-phone.webp'); }
+
+    /* BASIC - FONTS */
+    .fs-48 { font-size: 36px !important; }
+}
