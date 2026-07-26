@@ -11,6 +11,14 @@ const closeEnquiry = document.querySelector(".close-enquiry");
 const registrationFormTriggers = document.querySelectorAll('.registration-form-trigger');
 const enquiryFormTriggers = document.querySelectorAll(".enquiry-form-trigger");
 
+const sections = document.querySelectorAll('.section');
+
+// ==================================================
+// IMPORTS
+// ==================================================
+
+import { createIntersectionObserver } from './fadein.js';
+
 // ==================================================
 // FUNCTIONS
 // ==================================================
@@ -26,8 +34,21 @@ function closeForm(form) {
 }
 
 // ==================================================
+// FUNCTION CALLS
+// ==================================================
+
+const observer = createIntersectionObserver();
+
+// ==================================================
 // EVENT LISTENERS
 // ==================================================
+
+// & INITIAL DISPLAY SETTINGS
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        sections.forEach(section => { observer.observe(section); });
+    }, 4000);
+})
 
 // & EVENT LISTENER FOR REGISTRATION-FORM-TRIGGER CLICK
 registrationFormTriggers.forEach((btn) => {
